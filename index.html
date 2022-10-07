@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+        <meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width">
+        <title>Juego del Ahorcado</title>
+		<link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-ahorcado.css">
+    </head>
+	
+	<body>
+		<header>
+			<img class="logo" src="Imagenes/logo.svg">
+		</header>
+		
+		<main>
+			<section class="inicio-juego">
+				<button id="boton-iniciar">Iniciar juego</button>
+				<button id="boton-agregar-palabra">Agregar nueva palabra</button>
+			</section>
+			
+			<section class="agregar-palabra" hidden>
+				<h3>Ingrese una palabra<h3>
+				<input type="text" rows="1" maxlength="8" id="area-nueva-palabra"></input>
+				<p>🛈Max. de 8 letras</p>
+				<button id="boton-guardar-palabra">Guardar y empezar</button>
+				<button>Cancelar</button>
+			</section>
+			
+			<section class="juego-ahorcado">
+				<div id="imagen-horca">
+					<div id="base-horca" style="visibility: hidden">
+						<div class="clase-horca" id="rectangulo-base"></div>
+						<div class="clase-horca" id="rectangulo-vertical-largo"></div>
+						<div class="clase-horca" id="rectangulo-horizontal"></div>
+						<div class="clase-horca" id="rectangulo-vertical-corto"></div>
+					</div>
+					
+
+					<div class="clase-horca" id="ahorcado-cabeza" style="visibility: hidden"></div>
+					<div class="clase-horca" id="ahorcado-cuerpo" style="visibility: hidden"></div>
+					<div class="clase-horca parte-izquierda ahorcado-brazo" id="ahorcado-brazo-izq" style="visibility: hidden"></div>
+					<div class="clase-horca parte-izquierda ahorcado-pierna" id="ahorcado-pierna-izq" style="visibility: hidden"></div>
+					<div class="clase-horca parte-derecha ahorcado-brazo" id="ahorcado-brazo-der" style="visibility: hidden"></div>
+					<div class="clase-horca parte-derecha ahorcado-pierna" id="ahorcado-pierna-der" style="visibility: hidden"></div>
+				</div>
+				<!-- <input type="text" cols="8" rows="1" id="area-palabra-secreta" readonly></input> -->
+				<p id="area-palabra-secreta"></p>
+				<p id="area-letras-erroneas"></p>
+			</section>
+			
+			
+		</main>
+		
+		<script src="ahorcado.js"></script>
+		
+		<footer>
+		
+		</footer>	
+	</body>
+</html>

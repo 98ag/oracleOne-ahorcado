@@ -1,0 +1,104 @@
+html{
+	background: #E5E5E5;
+}
+
+header{
+	padding: 40px 0;
+}
+
+body{
+	width: 940px;
+}
+
+body textarea{
+	resize: none;
+}
+
+#area-palabra-secreta{
+	padding: 20px;
+	letter-spacing: 1em;
+}
+
+.juego-ahorcado p{
+	width: "20%";
+	height: "35%";
+}
+
+#imagen-horca{
+	width: 294px;
+	height: 360px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.clase-horca{
+	background: #0A3871;
+	position: absolute;
+}
+
+#rectangulo-base{
+	height: 5px;
+	width: 100%;
+	bottom: 0;
+}
+
+#rectangulo-vertical-largo{
+	height: 100%;
+	width: 4.5px;
+	left: 80px;
+}
+
+#rectangulo-horizontal{
+	height: 4.5px;
+	width: 177.75px;
+	top: 0;
+	left: 80px;
+}
+
+#rectangulo-vertical-corto{
+	height: 49.5px;
+	width: 4.5px;
+	left: 254px;
+	top: 0;
+}
+
+#ahorcado-cabeza{
+	height: 63px;
+	width: 63px;
+	left: 220px;
+	top: 49px;
+	border-radius: 50%;
+	border: 4.5px solid #0A3871;
+	background-color: #E5E5E5;
+}
+
+#ahorcado-cuerpo{
+	width: 4.5px;
+	height: 135px;
+	left: 254px;
+	top: 120px;
+}
+
+.parte-izquierda{
+	width: 4.5px;
+	height: 72px;
+	transform: rotate(30deg);
+	left: 237px;
+	border-radius: 10px;
+}
+
+.parte-derecha{
+	width: 4.5px;
+	height: 72px;
+	transform: rotate(-30deg);
+	left: 271px;
+	border-radius: 10px;	
+}
+
+.ahorcado-brazo{
+	top: 113px;
+}
+
+.ahorcado-pierna{
+	top: 247px;
+}
