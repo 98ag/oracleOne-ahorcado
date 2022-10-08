@@ -3,20 +3,71 @@ html{
 }
 
 header{
-	padding: 40px 0;
+	padding: 40px 0 0 40px;
+}
+
+.logo{
+	height: 48px;
+	width: 120px;
 }
 
 body{
-	width: 940px;
+	max-height: 100%;
 }
 
 body textarea{
 	resize: none;
 }
 
-#area-palabra-secreta{
-	padding: 20px;
-	letter-spacing: 1em;
+main{
+	width: 100%;
+}
+
+.contenedor-botones-inicio{
+	width: 350px;
+	position: relative;
+	z-index: 1;
+	left: calc(50% - 175px);
+	top: 200px;
+}
+
+.botones-inicio{
+	display: block;
+	margin: 25px auto;
+	font-size: 16px;
+	font-family: 'Inter', sans-serif;
+	border-radius: 24px;
+}
+
+#boton-iniciar{
+	width: 300px;
+	height: 100px;
+	background: #0A3871;
+	color: white;
+	border-width: 0;
+}
+
+
+#boton-agregar-palabra{
+	width: 250px;
+	height: 60px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #0A3871;
+	color: #0A3871;
+}
+
+.botones-inicio:hover{
+	font-size: 20px;
+}
+
+.seccion-ahorcado{
+	outline-style: solid;
+	outline-color: red;
+	outline-width: 3px;
+	position: absolute;
+	left: calc(50% - 147px);
+	top: calc(50% - 200px);
 }
 
 .juego-ahorcado p{
@@ -28,7 +79,6 @@ body textarea{
 	width: 294px;
 	height: 360px;
 	position: relative;
-	margin: 0 auto;
 }
 
 .clase-horca{
@@ -101,4 +151,18 @@ body textarea{
 
 .ahorcado-pierna{
 	top: 247px;
+}
+
+#area-palabra-secreta{
+	font-size: 30px;
+	letter-spacing: 1em;
+	position: relative;
+	text-align: center;
+	margin: 40px 0;
+}
+
+#area-letras-erroneas{
+	letter-spacing: 1em;
+	position: relative;
+	text-align:center;
 }

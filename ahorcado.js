@@ -1,3 +1,4 @@
+//Asignacion de botones y areas de texto
 let botonIniciarJuego = document.getElementById("boton-iniciar");
 let botonAgregarPalabra = document.getElementById("boton-agregar-palabra");
 let botonGuardarPalabra = document.getElementById("boton-guardar-palabra");
@@ -5,6 +6,7 @@ let areaNuevaPalabra = document.getElementById("area-nueva-palabra");
 let areaPalabraSecreta = document.getElementById("area-palabra-secreta");
 let areaLetrasErroneas = document.getElementById("area-letras-erroneas");
 
+//Asignacion de elementos del dibujo de la horca
 let areaHorca = document.getElementById("imagen-horca");
 let baseHorca = document.getElementById("base-horca");
 let cabezaHorca = document.getElementById("ahorcado-cabeza");
@@ -14,6 +16,7 @@ let brazoDerHorca = document.getElementById("ahorcado-brazo-der");
 let piernaIzqHorca = document.getElementById("ahorcado-pierna-izq");
 let piernaDerHorca = document.getElementById("ahorcado-pierna-der");
 
+//Variables a usar en el programa
 let palabras = ["auto", "perro", "casa"];
 let palabraSecreta, vidas;
 let palabraSecretaMostrar;
@@ -36,6 +39,8 @@ function crearPalabraSecreta(){
 }
 
 function iniciarJuego(){
+	botonIniciarJuego.style.visibility = 'hidden';
+	botonAgregarPalabra.style.visibility = 'hidden';
 	palabraSecreta = "";
 	palabraSecretaMostrar = "";
 	crearPalabraSecreta();
