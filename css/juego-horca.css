@@ -1,0 +1,71 @@
+
+.juego__horca--parte{
+    background: var(--dark-blue-300);
+    position: absolute;
+    border-radius: .2rem;
+}
+
+#rectangulo-base{
+    width: 100%;
+    height: 1.5%;
+    bottom: 0;
+}
+
+#rectangulo-vertical-largo{
+    height: 100%;
+    width: 2%;
+    left: 25%;
+}
+
+#rectangulo-horizontal{
+	height: 1.5%;
+	width: 55%;
+	top: 0;
+	left: 25%;
+}
+
+#rectangulo-vertical-corto{
+	height: 15%;
+	width: 2%;
+	left: 79%;
+	top: 0;
+}
+
+#ahorcado-cabeza{
+    height: 18%;
+    width: 23%;
+    border-radius: 50%;
+    border: 4px solid var(--dark-blue-300);
+    background-color: #e5e5e5;
+    top: 14%;
+    right: 7%;
+}
+
+#ahorcado-cuerpo{
+    width: 1.5%;
+    height: 35%;
+    right: 19%;
+    top: 33.5%;
+}
+
+.parte-izquierda{
+    width: 1.5%;
+    height: 20%;
+    transform: rotate(25deg);
+    right: 24.5%;
+}
+
+.parte-derecha{
+    width: 1.5%;
+    height: 20%;
+    transform: rotate(-25deg);
+    right: 13.5%;
+}
+
+.brazo{
+    top: 33%;
+}
+
+.pierna{
+    top: 66.5%;
+}

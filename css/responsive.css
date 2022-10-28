@@ -1,0 +1,100 @@
+@media only screen and (min-width: 600px){
+    .boton-1, .boton-2{
+        width: 75vw;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .boton-1, .boton-2{
+        width: 42vw;
+        height: 7vh;
+    }
+
+    .inicio__iniciar-juego{
+        height: 12vh;
+        width: 50vw;
+    }
+    
+    .ingreso{
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .ingreso__botones{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .juego{
+        height: 100%;
+    }
+
+    .juego__texto{
+        padding: .5rem;
+        letter-spacing: 2rem;
+    }
+
+    .juego__texto--palabra-secreta{
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    .juego__texto--letras-erroneas{
+        font-size: 1.5rem;
+    }
+
+    .juego__botones{
+        width: 100vw;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .juego__botones--nuevo{
+        margin-bottom: 0;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    .boton-1, .boton-2{
+        width: 25vw;
+    }
+
+    .inicio{
+        height: 50%
+    }
+    
+    .inicio__agregar-palabra{
+        height: 8vh;
+        width: 23vw;
+    }
+
+    .ingreso{
+        width: 55vw;
+        height: 60vh;
+    }
+
+    .ingreso__botones{
+        justify-content: space-between;
+    }
+
+    .juego{
+        width: 70vw;
+        justify-content: space-evenly;
+    }
+
+    .juego__texto{
+        margin-top: .5rem;
+    }
+
+    .juego__botones{
+        margin: 1rem;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    #ahorcado-cabeza{
+        border-width: 5px;
+    }
+}

@@ -1,0 +1,49 @@
+:root{
+    --dark-blue-300: #0A3871;
+    --darkish-blue: #1e508d;
+    --grey-400: #495057;
+}
+
+body{
+    background: #e5e5e5;
+    font-family: 'Inter', sans-serif;
+}
+
+.header{
+    height: 10vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 82vh;
+}
+
+footer{
+    height: 8vh;
+    background: red;
+}
+
+.boton-1{
+    color: white;
+    background: var(--dark-blue-300);
+    border-radius: 30px;
+    border:none;
+    font-size: 18px;    
+    height: 9vh;
+    width: 90vw;
+}
+
+.boton-1:hover{
+    background: var(--darkish-blue);
+}
+
+.boton-2{
+    color: var(--dark-blue-300);
+    border: solid var(--dark-blue-300) 1px;
+    border-radius: 30px;
+    height: 9vh;
+    width: 90vw;
+    font-size: 18px;
+}

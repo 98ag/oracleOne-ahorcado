@@ -1,0 +1,44 @@
+.ingreso{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    height: 85%;
+}
+
+.ingreso__titulo{
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: 450;
+    color: var(--dark-blue-300);
+}
+
+.ingreso__area{
+    font-size: 2.2rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ingreso__botones{
+    display:flex;
+    flex-direction: column;
+}
+
+.ingreso__informacion{
+    font-size: .8rem;
+    color: var(--grey-400);
+    padding-bottom: 1rem;
+}
+
+.ingreso__botones--guardar{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+

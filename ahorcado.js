@@ -1,14 +1,18 @@
 //Asignacion de botones y areas de texto
 let botonIniciarJuego = document.getElementById("boton-iniciar");
-let botonAgregarPalabra = document.getElementById("boton-agregar-palabra");
+let botonAgregarPalabra = document.getElementById("boton-agregar");
 let botonGuardarPalabra = document.getElementById("boton-guardar-palabra");
 let areaNuevaPalabra = document.getElementById("area-nueva-palabra");
 let areaPalabraSecreta = document.getElementById("area-palabra-secreta");
 let areaLetrasErroneas = document.getElementById("area-letras-erroneas");
 
+let seccionInicio = document.getElementById("seccion-inicio");
+let seccionAgregado = document.getElementById("seccion-agregado");
+let seccionJuego = document.getElementById("seccion-juego");
+
+let botonCancelar = document.getElementById("boton-cancelar");
+
 //Asignacion de elementos del dibujo de la horca
-let areaHorca = document.getElementById("imagen-horca");
-let baseHorca = document.getElementById("base-horca");
 let cabezaHorca = document.getElementById("ahorcado-cabeza");
 let cuerpoHorca = document.getElementById("ahorcado-cuerpo");
 let brazoIzqHorca = document.getElementById("ahorcado-brazo-izq");
@@ -17,16 +21,25 @@ let piernaIzqHorca = document.getElementById("ahorcado-pierna-izq");
 let piernaDerHorca = document.getElementById("ahorcado-pierna-der");
 
 //Variables a usar en el programa
+let nuevaPalabra;
 let palabras = ["auto", "perro", "casa"];
-let palabraSecreta, vidas;
+let palabraSecreta;
 let palabraSecretaMostrar;
-let letrasErroneas = [];
+let letrasErroneas = "";
+let vidas;
 
 
 function agregarPalabra(){
-	palabras.push(areaNuevaPalabra.value);
-	areaNuevaPalabra.value = "";
-	areaNuevaPalabra.focus();
+	seccionInicio.style.display = "none";
+	seccionAgregado.style.display = "flex";
+
+	document.addEventListener('onkey')
+
+	botonCancelar.addEventListener('click', (e) => {
+		areaNuevaPalabra.innerHTML = "";
+		seccionInicio.style.display = "flex";
+		seccionAgregado.style.display = "none";
+	})
 }
 
 function crearPalabraSecreta(){
@@ -39,8 +52,8 @@ function crearPalabraSecreta(){
 }
 
 function iniciarJuego(){
-	botonIniciarJuego.style.visibility = 'hidden';
-	botonAgregarPalabra.style.visibility = 'hidden';
+	seccionInicio.style.display = "none";
+	seccionJuego.style.display = "flex";
 	palabraSecreta = "";
 	palabraSecretaMostrar = "";
 	crearPalabraSecreta();
@@ -49,6 +62,12 @@ function iniciarJuego(){
 	document.addEventListener('keypress', revisarTeclaPresionada);
 	areaLetrasErroneas.innerHTML = "";
 }
+
+// Agregar funcion que controle el juego, dejar revisarTeclaPresionada
+// como funcion que devuelva el caracter si es una letra permitida o en 
+// caso contrario false
+
+// Utilizar el false para controlar las vidas/dibujo/etc
 
 function revisarTeclaPresionada(e){
 	let letraCodigo = e.charCode;	
@@ -68,15 +87,15 @@ function revisarTeclaPresionada(e){
 		}
 		else if (!(letrasErroneas.includes(letraPresionada))){			
 			vidas--;
-			letrasErroneas.push(letraPresionada);
-			areaLetrasErroneas.innerHTML = String(letrasErroneas);
+			letrasErroneas += letraPresionada;
+			areaLetrasErroneas.innerHTML = letrasErroneas;
 			dibujarHorca(vidas);
 		}
 	}
 
 	if (vidas == 0 || palabraSecreta == palabraSecretaMostrar){
 		console.log("Terminado");
-		letrasErroneas = [];
+		letrasErroneas = "";
 		document.removeEventListener('keypress' , revisarTeclaPresionada);
 		botonIniciarJuego.innerHTML = "Iniciar nuevo juego";
 		return;
@@ -86,8 +105,7 @@ function revisarTeclaPresionada(e){
 function dibujarHorca(vidas){
 	switch(vidas){
 		case 4:
-			areaHorca.style.visibility = 'visible';
-			baseHorca.style.visibility = 'visible';
+			cabezaHorca.style.visibility = 'visible';
 			return;
 		case 3:
 			cabezaHorca.style.visibility = 'visible';
@@ -104,9 +122,6 @@ function dibujarHorca(vidas){
 			brazoIzqHorca.style.visibility = 'visible';
 			return;
 		default:
-			areaHorca.style.visibility = 'hidden';
-			baseHorca.style.visibility = 'hidden';
-			cabezaHorca.style.visibility = 'hidden';
 			cuerpoHorca.style.visibility = 'hidden';
 			piernaDerHorca.style.visibility = 'hidden';
 			piernaIzqHorca.style.visibility = 'hidden';
@@ -116,7 +131,7 @@ function dibujarHorca(vidas){
 }
 
 
-botonGuardarPalabra.onclick = agregarPalabra;
+botonAgregarPalabra.onclick = agregarPalabra;
 botonIniciarJuego.onclick = iniciarJuego;
 
 

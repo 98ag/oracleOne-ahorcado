@@ -1,0 +1,41 @@
+.juego{
+    display: none;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: space-evenly;
+}
+
+.juego__horca{
+    height: 45vh;
+    width: 35vh;
+    display: block;
+    position: relative;
+}
+
+.juego__texto{
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.juego__texto--palabra-secreta{
+    color: var(--dark-blue-300);
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.juego__texto--letras-erroneas{
+    color: var(--grey-400);
+}
+
+.juego__botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.juego__botones--nuevo{
+    margin-bottom: .8rem;
+}
