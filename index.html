@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/ingreso.css">
     <link rel="stylesheet" href="css/juego.css">
     <link rel="stylesheet" href="css/juego-horca.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
 
 </head>
@@ -37,8 +38,8 @@
             <div class="ingreso__area--botones">
                 <p class="ingreso__informacion"><i class="fa fa-exclamation-circle"></i> Max. de 8 letras</p>
                 <div class="ingreso__botones">                
-                    <button class="ingreso__botones--guardar boton-1" id="boton-guardar-palabra">Guardar y empezar</button>
-                    <button class="ingreso__botones--cancelar boton-2" id="boton-cancelar">Cancelar</button>
+                    <button class="ingreso__botones--guardar boton-1" id="boton-guardar-palabra">Guardar | Nueva Palabra</button>
+                    <button class="ingreso__botones--cancelar boton-2" id="boton-cancelar">Cancelar | Menu Principal</button>
                 </div>
             </div>          
             
@@ -64,15 +65,26 @@
             </div>
             
             <div class="juego__botones">
-                <button class="juego__botones--nuevo boton-1">Nuevo Juego</button>
-                <button class="juego__botones--rendirse boton-2">Rendirse</button>
+                <button class="juego__botones--nuevo boton-1" id="boton-nuevo-juego">Nuevo Juego</button>
+                <button class="juego__botones--rendirse boton-2" id="boton-rendirse">Rendirse</button>
             </div>            
         </div>
     </main>
     <script src="ahorcado.js"></script>
 
     <footer class="footer">
-        <p class="footer__texto">T D D</p>
+        <div class="footer__redes">
+            <a href="https://www.github.com/98ag">
+                <img class="footer__redes--logo" src="./Imagenes/logo-github.png" alt="Logo Github">
+            </a>
+            <a href="https://www.linkedin.com/in/agarciamag/">
+                <img class="footer__redes--logo" src="./Imagenes/logo-linkedin.png" alt="Logo Linkedin">
+            </a>
+        </div>
+        <div class="footer__texto">
+            <p class="footer__texto--nombre">Agustin Garcia</p>
+            <p class="footer__texto--año">2022</p>
+        </div>
     </footer>
 </body>
 </html>
