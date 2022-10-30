@@ -151,7 +151,6 @@ function controlJuego(e){
 	}
 
 	if (vidas == 0 || palabraSecreta == palabraSecretaMostrar){
-		console.log("Terminado");
 		document.removeEventListener('keydown' , controlJuego);
 		botonRendirse.innerHTML = "Menu Principal";
 	}
